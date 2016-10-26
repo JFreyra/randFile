@@ -10,6 +10,7 @@
 int randomNumber(){
   
   int randomData = open("/dev/random",O_RDONLY);
+  printf("/dev/random opened?: %d\n",randomData);
   int randomNumber;
   int size = read(randomData,randomNumber,4);
   printf("randomNumber: %d\n",randomNumber);
