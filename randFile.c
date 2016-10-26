@@ -11,7 +11,7 @@ int randomNumber(){
   
   int randomData = open("/dev/random",O_RDONLY);
   printf("/dev/random opened?: %d\n",randomData);
-  int randomNumber;
+  int *randomNumber; // needs a pointer not a value
   int size = read(randomData,randomNumber,4);
   printf("randomNumber: %d\n",randomNumber);
   printf("size == 4? size: %d\n",size);
